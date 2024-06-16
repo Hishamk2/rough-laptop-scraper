@@ -28,21 +28,6 @@
         {
             background-color: #333333;
         }
-/* 
-        .table td:nth-child(2) 
-        {
-            color: #ff9900;
-        }
-
-        .table td:nth-child(3) 
-        {
-            color: #ff5050;
-        }
-
-        .table td:nth-child(4) 
-        {
-            color: #00acee;
-        } */
 
         .btn-custom 
         {
@@ -69,19 +54,11 @@
             font-style: italic;
         }
 
-        /* .price 
-        {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #ffcc00;
-        } */
-
         .cpu, .gpu, .ram, .storage 
         {
             font-family: 'Courier New', Courier, monospace;
             font-size: 1.1em;
         }
-
 
         tbody tr.dell-laptop td
         {
@@ -101,7 +78,7 @@
         }
         .nested-table tr
         {
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid white;
         }
         .nested-table td
         {
@@ -111,12 +88,12 @@
         }
         .nested-table tr:last-child
         {
-            border-bottom: 10px solid black;
+            border-bottom: none;
         }
         .nested-table td:first-child, .nested-table td:last-child
         {
-            border-left: 10px solid black;
-            border-right: 10px solid black;
+            border-left: none;
+            border-right: none;
         }
 
         .name
@@ -124,25 +101,6 @@
             font-size: 1.2em;
             font-weight: bold;
         }
-/*
-.price-cell .original-price 
-{
-    font-size: 0.9em;
-    color: #888888; 
-}
-
-.price-cell .discount-type 
-{
-    font-size: 0.9em;
-    color: #ff5050; 
-}
-
-.price-cell .final-price 
-{
-    font-size: 1.1em;
-    font-weight: bold;
-    color: #ffcc00; 
-}*/
 
         .feature-card 
         {
@@ -163,9 +121,9 @@
                     <th scope="col">Laptop Name</th>
                     <th scope="col">
                         <table class="nested-table">
-                            <tr>Original Price</tr>
-                            <tr>Discount Type</tr>
-                            <tr>Final Price</tr>
+                            <tr><th>Original Price</th></tr>
+                            <tr><th>Discount Type</th></tr>
+                            <tr><th>Final Price</th></tr>
                         </table>
                     </th>
                     <th scope="col">CPU</th>
@@ -174,423 +132,109 @@
                     <th scope="col">Storage</th>
                 </tr>
             </thead>
-            <tbody> 
-                <tr class="dell-laptop">
-                    <td class="name">
-                        <div class="feature-card">Chromebook 3110 2-in-1</div>
-                    </td>
-                    <td>
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">N/A</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">N/A</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">549.00</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel Celeron N4500</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">N/A</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">4 GB LPDDR4</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">64 GB eMMC</div>
-                    </td>
-                </tr>
-                
-                <tr class="acer-laptop">
-                    <td class="name">
-                        <div class="feature-card">Acer Chromebook 311 - CB311-9H-C6QW</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">199.99</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel Celeron N4020 processor</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">Intel UHD Graphics 600</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">4 GB standard memory</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">32 GB Flash storage; SD Card reader</div>
-                    </td>
-                </tr>
-                
-                <tr class="acer-laptop">
-                    <td class="name">
-                        <div class="feature-card">Acer Chromebook 311 - CB311-9H-C6QW</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">199.99</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel Celeron N4020 processor</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">Intel UHD Graphics 600</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">4 GB standard memory</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">32 GB Flash storage; SD Card reader</div>
-                    </td>
-                </tr>
-                <tr class="acer-laptop">
-                    <td class="name">
-                        <div class="feature-card">Aspire 1 Laptop - A115-32-C7ZW</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">399.99</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">-25.00%</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">299.99</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel Celeron N4500 processor Dual-core 1.10 GHz</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">Intel UHD Graphics shared memory</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">4 GB, DDR4 SDRAM</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">64 GB Flash Memory</div>
-                    </td>
-                </tr>
-                <tr class="dell-laptop">
-                    <td class="name">
-                        <div class="feature-card">Inspiron 15 Laptop</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">549.99</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">12th Gen Intel Core i3-1215U</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">Intel UHD Graphics</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">8 GB DDR4</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">512 GB SSD</div>
-                    </td>
-                </tr>
-                <tr class="acer-laptop">
-                    <td class="name">
-                        <div class="feature-card">Acer Chromebook 315 - CB315-3H-C7LJ</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">349.99</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel Celeron N4020 processor</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">Intel UHD Graphics 600</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">8 GB standard memory</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">64 GB Flash memory</div>
-                    </td>
-                </tr>
-                <tr class="dell-laptop">
-                    <td class="name">
-                        <div class="feature-card">Chromebook 3120</div>
-                    </td>
-                    <td class="price">
-                        <table class="nested-table">
-                            <tr>
-                                <td class="discount-type">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="original-price">
-                                    <div class="feature-card">No discount</div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="final-price">
-                                    <div class="feature-card">559.00</div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                    <td class="cpu">
-                        <div class="feature-card">Intel</div>
-                    </td>
-                    <td class="gpu">
-                        <div class="feature-card">N/A</div>
-                    </td>
-                    <td class="ram">
-                        <div class="feature-card">4 GB LPDDR5</div>
-                    </td>
-                    <td class="storage">
-                        <div class="feature-card">64 GB eMMC</div>
-                    </td>
-                </tr>
-                
-                </tr>
+            <tbody id="laptop-table-body">
+                <!-- JavaScript will inject rows here -->
             </tbody>
         </table>
     </div>
 
+    <script>
+        const laptops = [
+            {
+                name: "Chromebook 3110 2-in-1",
+                originalPrice: "N/A",
+                discountType: "N/A",
+                finalPrice: "549.00",
+                cpu: "Intel Celeron N4500",
+                gpu: "N/A",
+                ram: "4 GB LPDDR4",
+                storage: "64 GB eMMC",
+                class: "dell-laptop"
+            },
+            {
+                name: "Acer Chromebook 311 - CB311-9H-C6QW",
+                originalPrice: "No discount",
+                discountType: "No discount",
+                finalPrice: "199.99",
+                cpu: "Intel Celeron N4020 processor",
+                gpu: "Intel UHD Graphics 600",
+                ram: "4 GB standard memory",
+                storage: "32 GB Flash storage; SD Card reader",
+                class: "acer-laptop"
+            },
+            {
+                name: "Aspire 1 Laptop - A115-32-C7ZW",
+                originalPrice: "399.99",
+                discountType: "-25.00%",
+                finalPrice: "299.99",
+                cpu: "Intel Celeron N4500 processor Dual-core 1.10 GHz",
+                gpu: "Intel UHD Graphics shared memory",
+                ram: "4 GB, DDR4 SDRAM",
+                storage: "64 GB Flash Memory",
+                class: "acer-laptop"
+            },
+            {
+                name: "Inspiron 15 Laptop",
+                originalPrice: "No discount",
+                discountType: "No discount",
+                finalPrice: "549.99",
+                cpu: "12th Gen Intel Core i3-1215U",
+                gpu: "Intel UHD Graphics",
+                ram: "8 GB DDR4",
+                storage: "512 GB SSD",
+                class: "dell-laptop"
+            },
+            {
+                name: "Acer Chromebook 315 - CB315-3H-C7LJ",
+                originalPrice: "No discount",
+                discountType: "No discount",
+                finalPrice: "349.99",
+                cpu: "Intel Celeron N4020 processor",
+                gpu: "Intel UHD Graphics 600",
+                ram: "8 GB standard memory",
+                storage: "64 GB Flash memory",
+                class: "acer-laptop"
+            },
+            {
+                name: "Chromebook 3120",
+                originalPrice: "No discount",
+                discountType: "No discount",
+                finalPrice: "559.00",
+                cpu: "Intel",
+                gpu: "N/A",
+                ram: "4 GB LPDDR5",
+                storage: "64 GB eMMC",
+                class: "dell-laptop"
+            }
+        ];
 
+        function createRow(laptop) {
+            return `
+                <tr class="${laptop.class}">
+                    <td class="name"><div class="feature-card">${laptop.name}</div></td>
+                    <td class="price">
+                        <table class="nested-table">
+                            <tr><td class="original-price"><div class="feature-card">${laptop.originalPrice}</div></td></tr>
+                            <tr><td class="discount-type"><div class="feature-card">${laptop.discountType}</div></td></tr>
+                            <tr><td class="final-price"><div class="feature-card">${laptop.finalPrice}</div></td></tr>
+                        </table>
+                    </td>
+                    <td class="cpu"><div class="feature-card">${laptop.cpu}</div></td>
+                    <td class="gpu"><div class="feature-card">${laptop.gpu}</div></td>
+                    <td class="ram"><div class="feature-card">${laptop.ram}</div></td>
+                    <td class="storage"><div class="feature-card">${laptop.storage}</div></td>
+                </tr>
+            `;
+        }
 
-
-    
-
-
-
+        const tableBody = document.getElementById("laptop-table-body");
+        laptops.forEach(laptop => {
+            tableBody.innerHTML += createRow(laptop);
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp+G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodY5n7TzQ2hT0wZB+cSHGb+ok0dQ8IrfGsUa9RaRWjF+i8/W2MyF1k8Q==" crossorigin="anonymous"></script>
-</body>
-</html>
-
-
-<div class="container">
-    <table class="table table-bordered table-striped table-responsive-sm">
-        <thead>
-            <tr>
-                <th scope="col">COMPARE ALL PLANS</th>
-                <th scope="col">CHROMEBOOK 3110 2-IN-1</th>
-                <th scope="col">INSPIRON 15 LAPTOP</th>
-                <th scope="col">CHROMEBOOK 3120</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row" class="discount-type">Discount Type</th>
-                <td class="discount-type">No Discount</td>
-                <td class="discount-type">No Discount</td>
-                <td class="discount-type">No Discount</td>
-            </tr>
-            <tr>
-                <th scope="row" class="original-price">Original Price</th>
-                <td class="original-price">No Discount</td>
-                <td class="original-price">No Discount</td>
-                <td class="original-price">No Discount</td>
-            </tr>
-            <tr>
-                <th scope="row" class="price">Price</th>
-                <td class="price">549.00</td>
-                <td class="price">549.99</td>
-                <td class="price">559.00</td>
-            </tr>
-            <tr>
-                <th scope="row" class="cpu">CPU</th>
-                <td class="cpu">Intel Celeron N4500</td>
-                <td class="cpu">12th Gen Intel Core i3-1215U</td>
-                <td class="cpu">Intel</td>
-            </tr>
-            <tr>
-                <th scope="row" class="gpu">GPU</th>
-                <td class="gpu">N/A</td>
-                <td class="gpu">Intel UHD Graphics</td>
-                <td class="gpu">N/A</td>
-            </tr>
-            <tr>
-                <th scope="row" class="ram">RAM</th>
-                <td class="ram">4 GB LPDDR4</td>
-                <td class="ram">8 GB DDR4</td>
-                <td class="ram">4 GB LPDDR5</td>
-            </tr>
-            <tr>
-                <th scope="row" class="storage">Storage</th>
-                <td class="storage">64 GB eMMC</td>
-                <td class="storage">512 GB SSD</td>
-                <td class="storage">64 GB eMMC</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td style="text-align: center;">
-                    <button type="button" class="btn btn-custom">VISIT DELL</button>
-                </td>
-                <td style="text-align: center;">
-                    <button type="button" class="btn btn-custom">VISIT DELL</button>
-                </td>
-                <td style="text-align: center;">
-                    <button type="button" class="btn btn-custom">VISIT DELL</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nested Table Example</title>
-    <style>
-        table
-        {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        table, th, td
-        {
-            border: 1px solid black;
-        }
-        td
-        {
-            vertical-align: top;
-            text-align: center;
-            padding: 0;
-        }
-        .nested-table
-        {
-            width: 100%;
-            border-collapse: collapse;
-            border: none;
-        }
-        .nested-table tr
-        {
-            border-bottom: 1px solid black;
-        }
-        .nested-table td
-        {
-            border: none;
-            padding: 0;
-        }
-        .nested-table tr:last-child
-        {
-            border-bottom: none;
-        }
-        .nested-table td:first-child, .nested-table td:last-child
-        {
-            border-left: none;
-            border-right: none;
-        }
-    </style>
-</head>
-<body>
-    <table>
-        <tr>
-            <td>Main Table Cell 1</td>
-            <td>Main Table Cell 2</td>
-            <td>
-                <table class="nested-table">
-                    <tr>
-                        <td>-25.00%</td>
-                    </tr>
-                    <tr>
-                        <td>399.99</td>
-                    </tr>
-                    <tr>
-                        <td>299.99</td>
-                    </tr>
-                </table>
-            </td>
-            <td>Main Table Cell 4</td>
-        </tr>
-    </table>
 </body>
 </html>
