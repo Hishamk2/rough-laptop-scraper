@@ -1,0 +1,35 @@
+{
+    "0": {
+        "Link": "https://store.acer.com/en-ca/acer-chromebook-311-cb311-9h-c6qw",
+        "Name": "Acer Chromebook 311 - CB311-9H-C6QW",
+        "Sale Type": "Not on sale",
+        "Old Price": "Not on sale",
+        "Price": "199.99",
+        "Processor": "Intel\u00ae Celeron\u00ae N4020 processor",
+        "GPU": "Intel\u00ae UHD Graphics 600",
+        "RAM": "4 GB standard memory",
+        "Storage": "32 GB Flash storage; SD Card reader"
+    },
+    "1": {
+        "Link": "https://store.acer.com/en-ca/aspire-1-laptop-a115-32-c7zw",
+        "Name": "Aspire 1 Laptop - A115-32-C7ZW",
+        "Sale Type": "-25.00%",
+        "Old Price": "399.99",
+        "Price": "299.99",
+        "Processor": "Intel\u00ae Celeron\u00ae N4500 processor Dual-core 1.10 GHz",
+        "GPU": "Intel\u00ae UHD Graphics shared memory",
+        "RAM": "4 GB, DDR4 SDRAM",
+        "Storage": "64 GB Flash Memory"
+    },
+    "2": {
+        "Link": "https://store.acer.com/en-ca/acer-chromebook-315-cb315-3h-c7lj",
+        "Name": "Acer Chromebook 315 - CB315-3H-C7LJ",
+        "Sale Type": "Not on sale",
+        "Old Price": "Not on sale",
+        "Price": "349.99",
+        "Processor": "Intel\u00ae Celeron\u00ae N4020 processor",
+        "GPU": "Intel\u00ae UHD Graphics 600",
+        "RAM": "8 GB standard memory",
+        "Storage": "64 GB Flash memory"
+    }
+}

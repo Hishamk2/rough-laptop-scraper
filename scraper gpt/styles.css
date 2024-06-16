@@ -1,0 +1,79 @@
+/* styles.css */
+body
+{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1
+{
+    text-align: center;
+    color: #333;
+}
+
+#searchBox
+{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.results-container 
+{
+    display: flex;
+    gap: 20px;
+}
+
+.column 
+{
+    flex: 1;
+}
+
+.card 
+{
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.card.acer 
+{
+    background-color: #e0f7e9; /* Light green background */
+}
+
+.card.dell 
+{
+    background-color: #e0f0ff; /* Light blue background */
+}
+
+.card h2 
+{
+    margin-top: 0;
+}
+
+.card a 
+{
+    color: #0073e6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.card a:hover 
+{
+    text-decoration: underline;
+}

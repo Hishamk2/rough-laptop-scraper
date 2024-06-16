@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Laptop Comparison</title>
+  <style>
+    .laptop-comparison {
+      display: flex;
+      justify-content: center;
+      margin: 40px;
+    }
+
+    .acer-column {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 20px;
+    }
+
+    .acer-column img {
+      width: 100px;
+      margin: 20px;
+    }
+
+    .acer-column h2 {
+      color: #2ecc71; /* Acer green */
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .acer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .acer-column li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .acer-column li:last-child {
+      border-bottom: none;
+    }
+
+    .acer-column span:first-child {
+      font-weight: bold;
+      color: #34c759; /* Acer green shade */
+    }
+
+    .acer-column span:last-child {
+      font-style: italic;
+      color: #8bc34a; /* Acer green shade */
+    }
+
+    .dell-column {
+      background-color: #f7f7f7;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 20px;
+    }
+
+    .dell-column img {
+      width: 100px;
+      margin: 20px;
+    }
+
+    .dell-column h2 {
+      color: #2196f3; /* Dell blue */
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    .dell-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dell-column li {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .dell-column li:last-child {
+      border-bottom: none;
+    }
+
+    .dell-column span:first-child {
+      font-weight: bold;
+      color: #42a5f5; /* Dell blue shade */
+    }
+
+    .dell-column span:last-child {
+      font-style: italic;
+      color: #64b5f6; /* Dell blue shade */
+    }
+  </style>
+</head>
+<body>
+  <div class="laptop-comparison">
+    <div class="acer-column">
+      <img src="acer-logo.png" alt="Acer Logo">
+      <h2>Acer Laptops</h2>
+      <ul>
+        <li>
+          <span>Processor:</span>
+          <span>Intel Core i7-1165G7</span>
+        </li>
+        <li>
+          <span>RAM:</span>
+          <span>16 GB DDR4</span>
+        </li>
+        <li>
+          <span>Storage:</span>
+          <span>512 GB SSD</span>
+        </li>
+        <li>
+          <span>Display:</span>
+          <span>15.6" Full HD (1920x1080)</span>
+        </li>
+        <li>
+          <span>Graphics:</span>
+          <span>NVIDIA GeForce MX350</span>
+        </li>
+        <li>
+          <span>Operating System:</span>
+          <span>Windows 10 Home</span>
+        </li>
+        <li>
+          <span>Battery Life:</span>
+          <span>Up to 8 hours</span>
+        </li>
+      </ul>
+    </div>
+    <div class="dell-column">
+      <img src="dell-logo.png" alt="Dell Logo">
+      <h2>Dell Laptops</h2>
+      <ul>
+        <li>
+          <span>Processor:</span>
+          <span>Intel Core i5-1135G7</span>
+        </li>
+        <li>
+          <span>RAM:</span>
+          <span>8 GB DDR4</span>
+        </li>
+        <li>
+          <span>Storage:</span>
+          <span>256 GB SSD</span>
+        </li>
+        <li>
+          <span>Display:</span>
+          <span>14" Full HD (1920x1080)</span>
+        </li>
+        <li>
+          <span>Graphics:</span>
+          <span>Intel Iris Xe Graphics</span>
+        </li>
+        <li>
+          <span>Operating System:</span>
+          <span>Windows 10 Home</span>
+        </li>
+        <li>
+          <span>Battery Life:</span>
+          <span>Up to 6 hours</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

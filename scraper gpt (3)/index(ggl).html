@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #e0ffff, #cce0ff); /* Modern background gradient */
+        }
+        .container {
+            padding: 50px 0; 
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #228B22; /* Darker green for the title */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Subtle shadow */
+        }
+        .card {
+            border-radius: 15px;
+            box-shadow: 5px 5px 10px rgba(0,0,0,0.15); /* Pronounced card shadow */
+            transition: transform 0.2s; /* Smooth hover effect */
+        }
+        .card:hover {
+            transform: translateY(-5px); 
+        }
+        .acer-card {
+            background-color: #f0fff0; /* Very light green */
+        }
+        .dell-card {
+            background-color: #e6f2ff; /* Very light blue */
+        }
+        .card-title {
+            font-weight: bold;
+        }
+        .list-group-item {
+            border: none; /* Removes default list borders */
+            padding: 0.5rem 1rem; /* Adjusts spacing */
+        }
+        .badge {
+            font-size: 0.8rem; /* Smaller badge text */
+        }
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Laptop Showdown</h1>
+        <div class="row">
+
+            <div class="col-md-6 mb-4">
+                <div class="card acer-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Acer Chromebook 311 - CB311-9H-C6QW</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Processor:</strong> Intel® Celeron® N4020</li>
+                            <li class="list-group-item"><strong>GPU:</strong> Intel® UHD Graphics 600</li>
+                            <li class="list-group-item"><strong>RAM:</strong> 4 GB</li>
+                            <li class="list-group-item"><strong>Storage:</strong> 32 GB Flash + SD Card</li>
+                            <li class="list-group-item">
+                                <span class="badge badge-success">Not on Sale</span>
+                            </li>
+                            <li class="list-group-item text-center price">$199.99</li>
+                            <li class="list-group-item text-center">
+                                <a href="https://store.acer.com/en-ca/acer-chromebook-311-cb311-9h-c6qw" class="btn btn-success btn-sm" target="_blank">View Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4">
+                <div class="card dell-card">
+                    <div class="card-body">
+                        <h5 class="card-title">Chromebook 3110 2-in-1</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Processor:</strong> Intel® Celeron™ N4500</li>
+                            <li class="list-group-item"><strong>GPU:</strong> N/A</li> 
+                            <li class="list-group-item"><strong>RAM:</strong> 4 GB LPDDR4</li>
+                            <li class="list-group-item"><strong>Storage:</strong> 64 GB eMMC</li>
+                            <li class="list-group-item">
+                                <span class="badge badge-primary">Not on Sale</span>
+                            </li>
+                            <li class="list-group-item text-center price">$549.00</li>
+                            <li class="list-group-item text-center">
+                                <a href="//www.dell.com/en-ca/shop/laptops-ultrabooks/chromebook-3110-2-in-1/spd/chromebook-11-3110-2-in-1-laptop/s007wc3110jslca?view=configurations" class="btn btn-primary btn-sm" target="_blank">View Details</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

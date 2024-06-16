@@ -1,0 +1,75 @@
+/* style.css */
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  gap: 20px;
+}
+
+.laptop {
+  padding: 20px;
+  border-radius: 10px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.acer {
+  background-color: #F2F2F2; 
+  color: #00A6E0;
+}
+
+.acer h2 {
+  color: #00A6E0; 
+}
+
+.dell {
+  background-color: #FFFFFF;
+  color: #333333; 
+}
+
+.dell h2 {
+  color: #333333;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 200px;
+  background-color: #EEEEEE; 
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li strong {
+  font-weight: bold;
+}
+
+.iframe-container {
+  position: fixed; /* Fix iframe to the viewport */
+  width: 400px; 
+  height: 300px; 
+  border: 1px solid #ccc; 
+}
+
+.acer-iframe {
+  top: 10px;  
+  right: 10px;  
+}
+
+.dell-iframe {
+  bottom: 10px; 
+  right: 10px; 
+}

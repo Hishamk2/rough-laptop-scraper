@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index(10)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .acer-row {
+            background-color: #e0f2e0; /* Light Green */
+        }
+        .acer-row td {
+            color: #228b22; /* Dark Green */
+        }
+        .dell-row {
+            background-color: #e0f2ff; /* Light Blue */
+        }
+        .dell-row td {
+            color: #000080; /* Dark Blue */
+        }
+        th {
+            background-color: #f2f2f2; /* Light Gray */
+            color: #333; /* Dark Gray */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Laptop Comparison</h1>
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Processor</th>
+                    <th>Old Price</th>
+                    <th>New Price</th>
+                    <th>Sale Type</th>
+                    <th>GPU</th>
+                    <th>RAM</th>
+                    <th>Storage</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Acer Laptop 1 -->
+                <tr class="acer-row">
+                    <td>Acer Aspire 5 A515-56-762L</td>
+                    <td><a href="https://www.acer.com/ac/en/US/content/model/A515-56-762L" target="_blank">Acer Aspire 5</a></td>
+                    <td>Intel Core i7-1165G7</td>
+                    <td>$899</td>
+                    <td>$799</td>
+                    <td>Sale</td>
+                    <td>NVIDIA GeForce MX450</td>
+                    <td>8GB DDR4</td>
+                    <td>512GB SSD</td>
+                </tr>
+                <!-- Acer Laptop 2 -->
+                <tr class="acer-row">
+                    <td>Acer Swift 3 SF314-59-7699</td>
+                    <td><a href="https://www.acer.com/ac/en/US/content/model/SF314-59-7699" target="_blank">Acer Swift 3</a></td>
+                    <td>AMD Ryzen 5 5500U</td>
+                    <td>$999</td>
+                    <td>$899</td>
+                    <td>Sale</td>
+                    <td>AMD Radeon Graphics</td>
+                    <td>16GB DDR4</td>
+                    <td>1TB SSD</td>
+                </tr>
+                <!-- Dell Laptop 1 -->
+                <tr class="dell-row">
+                    <td>Dell XPS 13 9315</td>
+                    <td><a href="https://www.dell.com/en-us/shop/laptops/xps-laptops/xps-13-9315-laptop/spd/xps-13-9315-laptop" target="_blank">Dell XPS 13</a></td>
+                    <td>Intel Core i7-1195G7</td>
+                    <td>$1299</td>
+                    <td>$1199</td>
+                    <td>Sale</td>
+                    <td>Intel Iris Xe Graphics</td>
+                    <td>16GB LPDDR4x</td>
+                    <td>512GB SSD</td>
+                </tr>
+                <!-- Dell Laptop 2 -->
+                <tr class="dell-row">
+                    <td>Dell Inspiron 15 3000</td>
+                    <td><a href="https://www.dell.com/en-us/shop/laptops/inspiron-laptops/inspiron-15-3000-laptop/spd/inspiron-15-3000-laptop" target="_blank">Dell Inspiron 15</a></td>
+                    <td>Intel Core i5-1135G7</td>
+                    <td>$799</td>
+                    <td>$699</td>
+                    <td>Sale</td>
+                    <td>Intel UHD Graphics</td>
+                    <td>8GB DDR4</td>
+                    <td>256GB SSD</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
