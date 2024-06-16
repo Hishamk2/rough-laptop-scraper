@@ -6,108 +6,122 @@
     <title>Promotion Plans</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
-        body 
-        {
+        body {
             background-color: #333333;
             color: white;
         }
 
-        .table 
-        {
+        .table {
             background-color: #333333;
             color: white;
         }
 
-        .table th 
-        {
+        .table th {
             background-color: #444444;
             color: white;
+            position: relative;
         }
 
-        .table td 
-        {
+        .table th span {
+            position: absolute;
+            right: 10px;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+        }
+
+        .table th.asc span {
+            border-bottom: 5px solid white;
+        }
+
+        .table th.desc span {
+            border-top: 5px solid white;
+        }
+
+        .table td {
             background-color: #333333;
         }
 
-        .btn-custom 
-        {
+        .btn-custom {
             background-color: #ff5050;
             color: white;
             border-radius: 5px;
             padding: 10px 20px;
         }
 
-        .btn-custom:hover 
-        {
+        .btn-custom:hover {
             background-color: #ff7e7e;
         }
 
-        h1 
-        {
+        h1 {
             text-align: center;
             margin-top: 30px;
             margin-bottom: 20px;
         }
 
-        .discount-type, .original-price 
-        {
+        .discount-type, .original-price {
             font-style: italic;
         }
 
-        .cpu, .gpu, .ram, .storage 
-        {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 1.1em;
+        .cpu {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
         }
 
-        tbody tr.dell-laptop td
-        {
+        tbody tr.dell-laptop td {
             background-color: #0672cb;
         }
 
-        tbody tr.acer-laptop td
-        {
+        tbody tr.acer-laptop td {
             background-color: #4e8a16;
         }
 
-        .nested-table
-        {
+        .nested-table {
             width: 100%;
             border-collapse: collapse;
             border: none;
         }
-        .nested-table tr
-        {
+
+        .nested-table tr {
             border-bottom: 1px solid white;
         }
-        .nested-table td
-        {
+
+        .nested-table td, .nested-table th {
             border: none;
             padding: 0;
             width: 100%;
         }
-        .nested-table tr:last-child
-        {
+
+        .nested-table tr:last-child {
             border-bottom: none;
         }
-        .nested-table td:first-child, .nested-table td:last-child
-        {
+
+        .nested-table td:first-child, .nested-table td:last-child, .nested-table th:first-child, .nested-table th:last-child {
             border-left: none;
             border-right: none;
         }
 
-        .name
-        {
+        .name {
             font-size: 1.2em;
             font-weight: bold;
         }
 
-        .feature-card 
-        {
+        .feature-card {
             margin: 3px;
             padding: 3px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .final-price {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        .clickable {
+            cursor: pointer;
         }
     </style>
 </head>
@@ -123,7 +137,7 @@
                         <table class="nested-table">
                             <tr><th>Original Price</th></tr>
                             <tr><th>Discount Type</th></tr>
-                            <tr><th>Final Price</th></tr>
+                            <tr><th class="clickable" onclick="sortTable()">Final Price <span></span></th></tr>
                         </table>
                     </th>
                     <th scope="col">CPU</th>
@@ -208,6 +222,9 @@
             }
         ];
 
+        let sortDirection = 'asc';
+        const tableBody = document.getElementById("laptop-table-body");
+
         function createRow(laptop) {
             return `
                 <tr class="${laptop.class}">
@@ -227,9 +244,38 @@
             `;
         }
 
-        const tableBody = document.getElementById("laptop-table-body");
-        laptops.forEach(laptop => {
-            tableBody.innerHTML += createRow(laptop);
+        function sortTable() {
+            sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+
+            laptops.sort((a, b) => {
+                let valA = parseFloat(a.finalPrice.replace(/[^0-9.-]+/g, ""));
+                let valB = parseFloat(b.finalPrice.replace(/[^0-9.-]+/g, ""));
+
+                if (valA < valB) {
+                    return sortDirection === 'asc' ? -1 : 1;
+                }
+                if (valA > valB) {
+                    return sortDirection === 'asc' ? 1 : -1;
+                }
+                return 0;
+            });
+
+            tableBody.innerHTML = laptops.map(createRow).join('');
+            updateArrows(sortDirection);
+        }
+
+        function updateArrows(direction) {
+            const thElements = document.querySelectorAll('.nested-table th');
+            thElements.forEach(th => {
+                th.classList.remove('asc', 'desc');
+                if (th.classList.contains('clickable')) {
+                    th.classList.add(direction);
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            tableBody.innerHTML = laptops.map(createRow).join('');
         });
     </script>
 
