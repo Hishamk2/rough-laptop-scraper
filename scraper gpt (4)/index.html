@@ -5,124 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promotion Plans</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: #333333;
-            color: white;
-        }
+    <style>body {
+        background-color: #333333;
+        color: white;
+    }
+    
+    .table {
+        background-color: #333333;
+        color: white;
+    }
+    
+    .table th {
+        background-color: #444444;
+        color: white;
+        position: relative;
+    }
+    
+    .table th span {
+        position: absolute;
+        right: 10px;
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+    }
+    
+    .table th.asc span {
+        border-bottom: 5px solid white;
+    }
+    
+    .table th.desc span {
+        border-top: 5px solid white;
+    }
+    
+    .table td {
+        background-color: #333333;
+    }
+    
+    .btn-custom {
+        background-color: #ff5050;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+    }
+    
+    .btn-custom:hover {
+        background-color: #ff7e7e;
+    }
+    
+    h1 {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .discount-type, .original-price {
+        font-style: italic;
+    }
+    
+    .cpu {
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+    }
+    
+    tbody tr.dell-laptop td {
+        background-color: #0672cb;
+    }
+    
+    tbody tr.acer-laptop td {
+        background-color: #4e8a16;
+    }
+    
+    .nested-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: none;
+    }
+    
+    .nested-table tr {
+        border-bottom: 1px solid white;
+    }
+    
+    .nested-table td, .nested-table th {
+        border: none;
+        padding: 0;
+        width: 100%;
+    }
+    
+    .nested-table tr:last-child {
+        border-bottom: none;
+    }
+    
+    .nested-table td:first-child, .nested-table td:last-child, .nested-table th:first-child, .nested-table th:last-child {
+        border-left: none;
+        border-right: none;
+    }
+    
+    .name {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    
+    .feature-card {
+        margin: 3px;
+        padding: 3px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    }
+    
+    .final-price {
+        color: #ffc107;
+        font-weight: bold;
+    }
+    
+    .clickable {
+        cursor: pointer;
+    }
+    
+    .feature-card-link {
+        margin: 3px;
+        padding: 3px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center; /* Center the button horizontally */
+        align-items: center; /* Center the button vertically */
+    }
+    
+    .link-button-acer {
+        /* background-color: #ff5050; */
+        background-color: #FFA500;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.7em; /* Make the button text smaller */
+    }
 
-        .table {
-            background-color: #333333;
-            color: white;
-        }
+    .link-button-dell {
+        background-color: #FFA500;
+        color: white;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        font-size: 0.7em; /* Make the button text smaller */
+    }
 
-        .table th {
-            background-color: #444444;
-            color: white;
-            position: relative;
-        }
+    .acer-text {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
 
-        .table th span {
-            position: absolute;
-            right: 10px;
-            display: inline-block;
-            width: 0;
-            height: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-        }
+    .dell-text {
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
 
-        .table th.asc span {
-            border-bottom: 5px solid white;
-        }
+    .abc
+    {
+        color: white;
+    }
 
-        .table th.desc span {
-            border-top: 5px solid white;
-        }
-
-        .table td {
-            background-color: #333333;
-        }
-
-        .btn-custom {
-            background-color: #ff5050;
-            color: white;
-            border-radius: 5px;
-            padding: 10px 20px;
-        }
-
-        .btn-custom:hover {
-            background-color: #ff7e7e;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .discount-type, .original-price {
-            font-style: italic;
-        }
-
-        .cpu {
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-        }
-
-        tbody tr.dell-laptop td {
-            background-color: #0672cb;
-        }
-
-        tbody tr.acer-laptop td {
-            background-color: #4e8a16;
-        }
-
-        .nested-table {
-            width: 100%;
-            border-collapse: collapse;
-            border: none;
-        }
-
-        .nested-table tr {
-            border-bottom: 1px solid white;
-        }
-
-        .nested-table td, .nested-table th {
-            border: none;
-            padding: 0;
-            width: 100%;
-        }
-
-        .nested-table tr:last-child {
-            border-bottom: none;
-        }
-
-        .nested-table td:first-child, .nested-table td:last-child, .nested-table th:first-child, .nested-table th:last-child {
-            border-left: none;
-            border-right: none;
-        }
-
-        .name {
-            font-size: 1.2em;
-            font-weight: bold;
-        }
-
-        .feature-card {
-            margin: 3px;
-            padding: 3px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-        }
-
-        .final-price {
-            color: #ffc107;
-            font-weight: bold;
-        }
-
-        .clickable {
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
@@ -134,10 +182,10 @@
                 <tr>
                     <th scope="col">Laptop Name</th>
                     <th scope="col">
-                        <table class="nested-table">
+                        <table class="nested-table clickable" onclick="sortTable()">
                             <tr><th>Original Price</th></tr>
                             <tr><th>Discount Type</th></tr>
-                            <tr><th class="clickable" onclick="sortTable()">Final Price <span></span></th></tr>
+                            <tr><th>Final Price <span></span></th></tr>
                         </table>
                     </th>
                     <th scope="col">CPU</th>
@@ -167,8 +215,8 @@
             },
             {
                 name: "Acer Chromebook 311 - CB311-9H-C6QW",
-                originalPrice: "No discount",
-                discountType: "No discount",
+                originalPrice: "N/A",
+                discountType: "N/A",
                 finalPrice: "199.99",
                 cpu: "Intel Celeron N4020 processor",
                 gpu: "Intel UHD Graphics 600",
@@ -189,8 +237,8 @@
             },
             {
                 name: "Inspiron 15 Laptop",
-                originalPrice: "No discount",
-                discountType: "No discount",
+                originalPrice: "N/A",
+                discountType: "N/A",
                 finalPrice: "549.99",
                 cpu: "12th Gen Intel Core i3-1215U",
                 gpu: "Intel UHD Graphics",
@@ -200,8 +248,8 @@
             },
             {
                 name: "Acer Chromebook 315 - CB315-3H-C7LJ",
-                originalPrice: "No discount",
-                discountType: "No discount",
+                originalPrice: "N/A",
+                discountType: "N/A",
                 finalPrice: "349.99",
                 cpu: "Intel Celeron N4020 processor",
                 gpu: "Intel UHD Graphics 600",
@@ -211,8 +259,8 @@
             },
             {
                 name: "Chromebook 3120",
-                originalPrice: "No discount",
-                discountType: "No discount",
+                originalPrice: "N/A",
+                discountType: "N/A",
                 finalPrice: "559.00",
                 cpu: "Intel",
                 gpu: "N/A",
@@ -226,9 +274,17 @@
         const tableBody = document.getElementById("laptop-table-body");
 
         function createRow(laptop) {
+            // const visitButton = laptop.class.includes('dell-laptop')
+            //     ? '<a class="link-button-dell" href="#"><span class="dell-text">Visit Dell</span></a>'
+            //     : '<a class="link-button-acer" href="#"><span class="acer-text">Visit Acer</span></a>';
+            //<div class="feature-card-link">${visitButton}</div> wouild go beneath the name
+
             return `
                 <tr class="${laptop.class}">
-                    <td class="name"><div class="feature-card">${laptop.name}</div></td>
+                    <td class="name">
+                        <div class="feature-card"><a class="abc" href="#">${laptop.name}</a></div>
+                        
+                    </td>
                     <td class="price">
                         <table class="nested-table">
                             <tr><td class="original-price"><div class="feature-card">${laptop.originalPrice}</div></td></tr>
@@ -243,6 +299,7 @@
                 </tr>
             `;
         }
+
 
         function sortTable() {
             sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
